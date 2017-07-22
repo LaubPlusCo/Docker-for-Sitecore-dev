@@ -56,6 +56,18 @@ _Suggested convention;_
 Copy the folder to your solutions version control repo ex. ~/containers/solr/  
 *Remember to Add the {folder}/data/indexes dir to your ignore file (.gitignore/.tfignore)*
 
+###  Other Sitecore versions  
+
+The schema.xml file and SOLR cores matches an ootb Sitecore 8.2.1 instance but can easily be used for other (old and newer) versions of Sitecore. 
+
+1. Run the container > $ docker-compose up
+2. This will create a configsets folder under ./data/solr/data
+3. Stop the container again > $ docker-compose down
+3. Follow instructions [2] in the Sitecore docs found here to generate a new schema.xml
+4. Replace schema.xml files in the folders with Sitecore index names under ./data/solr/data
+5. Delete the folders with index names that are not used in the version of Sitecore (if any)
+6. If other indexes needed copy-paste an index folder, rename it, and edit the core.properties file in the copied folder to match the index name
+
 
 #### Adding new SOLR cores
 
