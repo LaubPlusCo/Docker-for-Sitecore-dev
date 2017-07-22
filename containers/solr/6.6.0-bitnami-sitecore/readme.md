@@ -57,22 +57,22 @@ Copy the folder to your solutions version control repo ex. ~/containers/solr/
 *Remember to Add the {folder}/data/indexes dir to your ignore file (.gitignore/.tfignore)*
 
 
-#### Adding new cores
+#### Adding new SOLR cores
 
 1. Stop the SOLR container if it is running ($ docker-compose stop)
-2. Copy-paste one of the existing core folders under ./data/solr/data
+2. Copy-paste one of the existing SOLR core folders under ./data/solr/data
 3. Rename the folder to the name of your new core
-4. Edit /{name of your core}/core.properties
+4. Edit /{name of new core}/core.properties
 ```yaml
-name={name of your core}
+name={name of new core}
 config=solrconfig.xml
 schema=schema.xml
-dataDir=/bitnami/data/{name of your core}
+dataDir=/bitnami/data/{name of nnew core}
 ```
 5. If the core require other fields to be added to the SOLR schema.xml then edit /{name of your core}/conf/schema.xml accordingly
 6. Start the SOLR container again ($ docker-compose start)
 
-*__Note__*: that SOLR 6.6 is NOT OFFICIALLY SUPPORTED by Sitecore - see [Sitecore SOLR Compatibility table](https://kb.sitecore.net/articles/227897) . However it does work fine for development.
+*__Note__*: SOLR 6.6 is NOT OFFICIALLY SUPPORTED by Sitecore - see [Sitecore SOLR Compatibility table](https://kb.sitecore.net/articles/227897) . However it does work fine for development.
 
 Anders Laub  
 [Contact](mailto:contact@laubplusco.net)  @Laub+Co
