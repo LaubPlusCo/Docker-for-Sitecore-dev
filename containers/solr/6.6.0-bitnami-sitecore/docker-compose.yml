@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  solr:
+    image: bitnami/solr:6.6.0-r1
+    ports:
+      - 8983:8983
+    volumes:
+      - ./data:/bitnami    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+    tty: true    

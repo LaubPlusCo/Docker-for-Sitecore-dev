@@ -1,8 +1,10 @@
 # Docker containers for Sitecore development
 
-This repo contains simple Docker containers for running MongoDB and SOLR to use for local Sitecore development.
+This repo contains simple docker-compose files to run MongoDB and SOLR containers to use for local Sitecore development instances.
 
-The containers are intended to be as lightweight as possible
+*Note*: it is Linux containers since they are intended to be as lightweight and small as possible.
+
+
 
 ## Containers for Sitecore 8.2.x  
 
