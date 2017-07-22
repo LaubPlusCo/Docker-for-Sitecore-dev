@@ -4,11 +4,12 @@ This extremely simple docker compose file starts a container running MongoDB 3.2
 
 ## Prerequisites
 - Docker v17.06.0  or later - [Download here](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+- Docker has to be set for Linux containers   
 
 ## Usage (first time)
 
-1. Open Powershell as admin in /containers/mongo/3.2/
-2. Run > docker-compose up
+1. Open Powershell or other command line as admin in ./containers/mongo/3.2/
+2. Run > $ docker-compose up
 3. Wait for container to start
 
 ## Configuration
@@ -43,8 +44,9 @@ services:
 volumes:
   data: 
 ```
-3. Run docker-compose up in Powershell from the folder
+3. Run > $ docker-compose up
 4. Edit /App_Config/connectionstrings.config 
+
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <connectionStrings>
@@ -60,5 +62,5 @@ _Suggested convention;_
 Copy the folder to your solution version control repo ex. ~/containers/mongodb/  
 *Remember to Add the {folder}/data/db dir to your VC ignore file (.gitignore/.tfignore)
 
-Anders Laub  
-[Contact](mailto:contact@laubplusco.net)  @Laub+Co
+**Anders Laub @Laub+Co**  
+*Feedback and comments welcome [contact me](mailto:contact@laubplusco.net)*

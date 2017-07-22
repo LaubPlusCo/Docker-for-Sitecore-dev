@@ -6,15 +6,15 @@ You can have a local SOLR instance running and configured for Sitecore 8.2.x in 
 
 ## Prerequisites
 - Docker v17.06.0  or later - [Download here](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+- Docker has to be set for Linux containers  
 
-## Usage
-
-1. Open Powershell as admin in /containers/solr/bitnami-6.6-sitecore/
+## Usage (first time)
+1. Open Powershell or other command line as admin in ./containers/solr/bitnami-6.6-sitecore/
 2. Run > $ docker-compose up
 3. Wait for SOLR to start
 4. Verify installation on localhost:8983
 
-    That's it. If the bitnami is cached on your machine it takes even less than a minute.
+    That's it. If the bitnami image is cached on your machine it takes even less than a minute.
 
 **More steps for first time run**
 
@@ -73,7 +73,7 @@ dataDir=/bitnami/data/{name of your core}
 5. If the core require other fields to be added to the SOLR schema.xml then edit /{name of your core}/conf/schema.xml accordingly
 6. Start the SOLR container again ($ docker-compose start)
 
-*__Note__*: that SOLR 6.6 is NOT OFFICIALLY SUPPORTED by Sitecore - see [Sitecore SOLR Compatibility table](https://kb.sitecore.net/articles/227897) . However it does work fine for development.
+*__Note__*: SOLR 6.6 is **NOT OFFICIALLY TESTED** thus is not supported by Sitecore - see [Sitecore SOLR Compatibility table](https://kb.sitecore.net/articles/227897) . However it does work fine for development.
 
-Anders Laub  
-[Contact](mailto:contact@laubplusco.net)  @Laub+Co
+**Anders Laub @Laub+Co**  
+*Feedback and comments welcome [contact me](mailto:contact@laubplusco.net)*
