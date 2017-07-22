@@ -18,7 +18,7 @@ This extremely simple docker compose file starts a container running MongoDB 3.2
 
 To support multiple development instances on the same machine you can use a dedicated MongoDB instance for each.
   
-  *Note*: it is not required to have multiple MongoDBs to support multiple Sitecore development instances as long as you ensure the collection names in connectionstrings.config are unique *Convention: {instance_name}_{collection name}*
+  *Note*: it is not required to have multiple MongoDBs to support multiple Sitecore development instances as long as you ensure the collection names in connectionstrings.config are unique *The common naming convention is: {instance_name}_{collection name}*
 
 1. Make a copy of the folder /containers/solr/bitnami-6.6-sitecore and name it according to the development instance
 2. Rename the container by editing the docker-compose.yml file and change localhost port
@@ -44,7 +44,7 @@ services:
 volumes:
   data: 
 ```
-3. Run > $ docker-compose up
+3. Open the folder in Powershell or other cmd ling and run > $ docker-compose up
 4. Edit /App_Config/connectionstrings.config 
 
 ``` xml
@@ -60,7 +60,7 @@ volumes:
 _Suggested convention;_ 
 
 Copy the folder to your solution version control repo ex. ~/containers/mongodb/  
-*Remember to Add the {folder}/data/db dir to your VC ignore file (.gitignore/.tfignore)
+*Remember to add the {folder}/data/db dir to your VC ignore file (.gitignore/.tfignore)*
 
 **Anders Laub @Laub+Co**  
 *Feedback and comments welcome [contact me](mailto:contact@laubplusco.net)*

@@ -6,20 +6,19 @@ You can have a local SOLR instance running and configured for Sitecore 8.2.x in 
 
 ## Prerequisites
 - Docker v17.06.0  or later - [Download here](https://store.docker.com/editions/community/docker-ce-desktop-windows)
-- Docker has to be set for Linux containers  
 
-## Usage (first time)
-1. Open Powershell or other command line as admin in ./containers/solr/bitnami-6.6-sitecore/
+## Usage
+
+1. Open Powershell as admin in /containers/solr/bitnami-6.6-sitecore/
 2. Run > $ docker-compose up
 3. Wait for SOLR to start
 4. Verify installation on localhost:8983
 
-    That's it. If the bitnami image is cached on your machine it takes even less than a minute.
+    That's it. If the bitnami is cached on your machine it takes even less than a minute.
 
 **More steps for first time run**
 
 5. Configure Sitecore to use SOLR 
-[Sitecore SOLR Compatibility table](https://kb.sitecore.net/articles/227897)  
 
     See f. ex [Setting up SOLR in Habitat](https://www.sitecorenutsbolts.net/2016/06/28/Setting-up-Solr-on-Habitat/) for an automated approach
 
@@ -49,8 +48,8 @@ services:
         max-file: "10"
     tty: true    
 ```
-3. Run docker-compose up in Powershell from the folder
-4. Change ContentSearch.Solr.ServiceBaseAddress Sitecore setting to http://localhost:{localhost port} - Remember; always use a patch file to change Sitecore config settings. 
+3. Go to folder in Powershell or other cmd line and run > $ docker-compose up
+4. Change the Sitecore configuration setting *ContentSearch.Solr.ServiceBaseAddress* to http://localhost:{localhost port} - Remember; always use a patch file to change Sitecore config settings. 
 
 _Suggested convention;_ 
 
@@ -73,7 +72,7 @@ dataDir=/bitnami/data/{name of your core}
 5. If the core require other fields to be added to the SOLR schema.xml then edit /{name of your core}/conf/schema.xml accordingly
 6. Start the SOLR container again ($ docker-compose start)
 
-*__Note__*: SOLR 6.6 is **NOT OFFICIALLY TESTED** thus is not supported by Sitecore - see [Sitecore SOLR Compatibility table](https://kb.sitecore.net/articles/227897) . However it does work fine for development.
+*__Note__*: that SOLR 6.6 is NOT OFFICIALLY SUPPORTED by Sitecore - see [Sitecore SOLR Compatibility table](https://kb.sitecore.net/articles/227897) . However it does work fine for development.
 
-**Anders Laub @Laub+Co**  
-*Feedback and comments welcome [contact me](mailto:contact@laubplusco.net)*
+Anders Laub  
+[Contact](mailto:contact@laubplusco.net)  @Laub+Co
