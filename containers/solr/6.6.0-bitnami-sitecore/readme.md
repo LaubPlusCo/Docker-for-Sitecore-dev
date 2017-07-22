@@ -63,11 +63,12 @@ The schema.xml file and SOLR cores matches an ootb Sitecore 8.2.1 instance but c
 1. Run the container > $ docker-compose up
 2. This will create a configsets folder under ./data/solr/data
 3. Stop the container again > $ docker-compose down
-3. Follow instructions [2] in the Sitecore docs found here to generate a new schema.xml
+3. Follow instructions [2] in the Sitecore docs [found here](https://kb.sitecore.net/articles/227897) to generate a new schema.xml
 4. Replace schema.xml files in the folders with Sitecore index names under ./data/solr/data
 5. Delete the folders with index names that are not used in the version of Sitecore (if any)
 6. If other indexes needed copy-paste an index folder, rename it, and edit the core.properties file in the copied folder to match the index name
 
+*__Note__*: Several known bugs in the generated schema.xml file exists for various versions of Sitecore. Using the files that exists in this repo should work for older versions and fix these bugs. It has currently not been tested though.
 
 #### Adding new SOLR cores
 
