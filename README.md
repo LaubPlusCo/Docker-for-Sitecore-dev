@@ -4,7 +4,7 @@ This repo contains simple Docker containers for running MongoDB and SOLR to use 
 
 The containers are intended to be as lightweight as possible
 
-##Sitecore 8.2.x  
+## Containers for Sitecore 8.2.x  
 
 [SOLR](/containers/solr/6.6.0-bitnami-sitecore/)  
 [MongoDB](/containers/solr/6.6.0-bitnami-sitecore/)
