@@ -1,0 +1,2 @@
+/containers/mongo/**/data/db
+/containers/solr/6.6.0-bitnami-sitecore/data/indexes

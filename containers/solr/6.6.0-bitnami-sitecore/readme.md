@@ -55,7 +55,7 @@ services:
 _Suggested convention;_ 
 
 Copy the folder to your solutions version control repo ex. ~/containers/solr/  
-*Remember to Add the {folder}/data/data dir to ignore file (.gitignore/.tfignore)
+*Remember to Add the {folder}/data/indexes dir to your ignore file (.gitignore/.tfignore)*
 
 
 #### Adding new cores
