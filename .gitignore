@@ -3,4 +3,4 @@
 !/containers/solr/6.6.0-bitnami-sitecore/data/solr/data/
 /containers/solr/6.6.0-bitnami-sitecore/data/solr/data/README.txt
 /containers/solr/6.6.0-bitnami-sitecore/data/solr/data/zoo.cfg
-/containers/solr/6.6.0-bitnami-sitecore/data/solr/data/config_sets
+/containers/solr/6.6.0-bitnami-sitecore/data/solr/data/configsets
