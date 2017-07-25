@@ -87,5 +87,8 @@ dataDir=/bitnami/data/{name of nnew core}
 
 *__Note__*: SOLR 6.6 is NOT OFFICIALLY SUPPORTED by Sitecore - see [Sitecore SOLR Compatibility table](https://kb.sitecore.net/articles/227897) . However it does work fine for development.
 
+### Please Contribute
+Report bugs, make fixes, add other versions etc.
+
 Anders Laub  
 [Contact](mailto:contact@laubplusco.net)  @Laub+Co
