@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  solr:
+    image: bitnami/solr:6.6.1-r0
+    ports:
+      - 8983:8983
+    volumes:
+      - ./data:/bitnami    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+    environment:
+      SOLR_SSL_KEY_STORE: /bitnami/solr-ssl.keystore.jks
+      SOLR_SSL_KEY_STORE_PASSWORD: secret
+      SOLR_SSL_TRUST_STORE: /bitnami/solr-ssl.keystore.jks
+      SOLR_SSL_TRUST_STORE_PASSWORD: secret
+    tty: true    
